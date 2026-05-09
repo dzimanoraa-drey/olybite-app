@@ -1,0 +1,57 @@
+body {
+  background-color: #f4f6f9;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.food-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+button {
+  border-radius: 8px !important;
+}
+
+/* SMS Popup */
+.sms-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 260px;
+  background: #222;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
