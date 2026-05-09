@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OLYBITE</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+
+<h1>🍔 OLYBITE</h1>
+
+<!-- LOGIN -->
+<div id="login">
+  <h2>Login</h2>
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<hr>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+  <h2>Menu</h2>
+
+  <!-- BURGER -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" width="150">
+    <button onclick="addToCart('Burger', 12)">Burger $12</button>
+  </div>
+
+  <!-- PIZZA -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1548365328-6c8f0c1f1c10?w=400" width="150">
+    <button onclick="addToCart('Pizza', 18)">Pizza $18</button>
+  </div>
+
+  <!-- SAUSAGE ROLL -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1606757389667-1f4a1d8a6b89?w=400" width="150">
+    <button onclick="addToCart('Sausage Roll', 6)">Sausage Roll $6</button>
+  </div>
+
+  <!-- MEAT PIE -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1605478371310-5c2d2c2f8f8c?w=400" width="150">
+    <button onclick="addToCart('Meat Pie', 7)">Meat Pie $7</button>
+  </div>
+
+  <!-- COKE -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400" width="150">
+    <button onclick="addToCart('Coke', 4)">Coke $4</button>
+  </div>
+
+  <!-- LEMONADE -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400" width="150">
+    <button onclick="addToCart('Lemonade', 4)">Lemonade $4</button>
+  </div>
+
+  <!-- BEER -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400" width="150">
+    <button onclick="addToCart('Beer', 8)">Beer $8</button>
+  </div>
+
+  <!-- WATER -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400" width="150">
+    <button onclick="addToCart('Water', 2)">Water $2</button>
+  </div>
+
+  <!-- WHITE WINE -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?w=400" width="150">
+    <button onclick="addToCart('White Wine', 15)">White Wine $15</button>
+  </div>
+
+  <!-- RED WINE -->
+  <div class="item">
+    <img src="https://images.unsplash.com/photo-1528826194825-5a61c5a6c4b3?w=400" width="150">
+    <button onclick="addToCart('Red Wine', 18)">Red Wine $18</button>
+  </div>
+
+  <hr>
+
+  <h2>Cart 🛒 (<span id="count">0</span>)</h2>
+  <div id="cart"></div>
+
+  <h3 id="total">Total: $0</h3>
+
+  <input id="phone" placeholder="+614XXXXXXXX">
+
+  <button onclick="checkout()">Place Order</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
